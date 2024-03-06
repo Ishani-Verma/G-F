@@ -22,31 +22,23 @@ h1 {
     width: 60%;
     position: fixed;
     bottom:0;
-    height: 50%;
+    height: 30%;
     padding: 15px;
     margin-top: 20px;
     margin-bottom: 20px;
     font-size: 24px;
-    border: 1px solid #060606;
+    border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
     background-color: rgba(0, 0, 0, 0.5);
     text-align: left; 
-    resize: none;
 }
-input[type=text]:focus {
-    border: 3px solid #000000;
-    transition: width 0.4s ease-in-out;
-    
-
-  }
-
 #fact-input::placeholder {
     text-align: left; 
-   
+ 
 }
 
- #clear-btn {
+ /* #clear-btn {
     margin-top: 20px;
     margin-bottom: 20px;
     position: fixed;
@@ -61,8 +53,8 @@ input[type=text]:focus {
     bottom: 0;
     right: 200px;
     padding :15px;
-}
-#submit-btn
+} */
+#refresh-btn
 {
     margin-top: 20px;
     margin-bottom: 20px;
@@ -78,11 +70,17 @@ input[type=text]:focus {
    bottom: 0;
     left:100ch;
     padding :15px;
+    transition-duration: 0.4s;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
+#refresh-btn:hover {
+    background-color: black; /* Green */
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    color: white;
+  }
 
 #submit-btn:hover, #clear-btn:hover {
     background-color:black;
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
 #gif-text {
@@ -95,7 +93,7 @@ input[type=text]:focus {
   
 }
 
-#plus-btn {
+/* #plus-btn {
     padding: 10px 20px;
     font-size: 18px;
     background-color: black;
@@ -121,7 +119,7 @@ input[type=text]:focus {
     position: absolute;
     top: 20px;
     right: 20px; /* Adjusted position */
-}
+ */
 
 #user-profile-icon {
     padding: 10px 20px;
@@ -133,22 +131,15 @@ input[type=text]:focus {
     width: 80px; /* Adjust icon size as needed */
     height: 40px; /* Adjust icon size as needed */
 }
-.profile {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .popup {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 200px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    z-index: 1;
-  }
-  
-  .profile:hover .popup {
-    display: block;
-  }
+
+#pred {
+    font-family: Arial, sans-serif; /* Change the font family as desired */
+    font-size: 60px; /* Change the font size as desired */
+    color: black; /* Change the text color as desired */
+    margin-top: 300px; /* Adjust the top margin as desired */
+}
+
+#output-box::placeholder {
+    text-align: left; 
+ 
+} 
