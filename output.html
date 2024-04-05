@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fake Fact Detection</title>
-    <link rel="stylesheet" type="text/css" href="fake_fact_detection.css">
+    <link rel="stylesheet" type="text/css" href="/static/fake_fact_detection.css">
 </head>
 <body>
     
@@ -13,14 +13,12 @@
       
    
         <h2 id="pred">Prediction:</h2>
-        <input type="text" id="fact-input2" placeholder="output....">
+        <input type="text" id="fact-input2" placeholder="output...." value="{{ result }}" readonly>
         <br>
         <button id="refresh-btn">Refresh</button>
-        
-        <!-- Add the user profile icon here -->
     </div>
     
    
-    <script src="output.js"></script>
+    <script src="/static/output.js"></script>
 </body>
 </html>

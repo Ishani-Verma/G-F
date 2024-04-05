@@ -4,21 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fake Fact Detection</title>
-    <link rel="stylesheet" type="text/css" href="fake_fact_detection.css">
+    <link rel="stylesheet" type="text/css" href="/static/fake_fact_detection.css">
 </head>
 <body>
   
     <h1 id="gif-text">G!F</h1>
 
   <div class="container">
-    <input type="text" id="fact-input" placeholder="Enter text...">
-    <br>
-    <button id="submit-btn">Submit</button>
-    <button id="clear-btn">Clear</button>
+    <form id="fake-fact-form" action="/detect_fake_fact" method="POST">
+      <input type="hidden" id="hidden-fact-input" name="fact_input" value="">
+      <input type="text" id="fact-input" placeholder="Enter text...">
+      <br>
+      <button id="submit-btn" type="submit">Submit</button>
+      <button id="clear-btn">Clear</button>
+  </form>
    
    
   </div>
 
-  <script src="app.js"></script>
+  <script src="/static/app.js"></script>
 </body>
 </html>
