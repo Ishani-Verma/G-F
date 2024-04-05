@@ -1,13 +1,33 @@
-AI Fact Verification Project-G!F
-Overview
-This project is aimed at developing a web application that uses logistic regression, decision tree classifier, and natural language processing (NLP) algorithms to determine the truthfulness of facts. Initially, the system is trained and tested using a geography dataset. However, the intention is to expand the database in the future to cover a wider range of topics and domains.
+<h1 align="center">⭐G!F -Fact Verification Project⭐</h1>
 
 
-Why This Project?
-1.Combatting Misinformation: In today's digital age, the spread of misinformation and fake news is a significant concern. By developing a fact verification system, we contribute to the efforts of combating misinformation and promoting accurate information dissemination.
+## About the Project
+The aim of this project is to develop a user-friendly web application that empowers users to verify the facts they encounter online. By leveraging advanced AI algorithms such as logistic regression, decision tree classifier, and NLP, the system can analyze textual data and make informed decisions about the veracity of statements.
+This project aims to develop a web application using logistic regression, decision tree classifier, and natural language processing (NLP) algorithms to determine the truthfulness of facts. Initially trained and tested using a geography dataset, the project intends to expand the database to cover a wider range of topics and domains in the future.
 
-2.Enhancing Information Integrity: Ensuring the integrity of information is crucial, especially in domains where factual accuracy is paramount, such as news reporting, academic research, and public information dissemination.
 
-3.Empowering Users: Providing users with a tool to verify the truthfulness of facts empowers them to make informed decisions, avoid spreading false information, and engage critically with online content.
-4.Scalability and Adaptability: By initially focusing on a geography dataset and planning to expand to other domains, our project demonstrates scalability and adaptability, ensuring that the fact verification system remains relevant and effective across different topics and datasets.
-5.AI Algorithms: By leveraging logistic regression, decision tree classifier, and NLP techniques, the system can analyze textual data and make informed decisions about the truthfulness of statements.
+## **Built with:**
+
+- **Frontend:** HTML, CSS, JavaScript :computer:
+- **Backend:** Python :snake:
+
+## Why This Project?
+**1.Combatting Misinformation:** In today's digital age, combating misinformation and fake news is crucial. This project contributes to these efforts by developing a fact verification system.
+
+**2.Enhancing Information Integrity:** Ensuring the integrity of information is vital, especially in domains where factual accuracy is paramount, such as news reporting and academic research.
+
+**3.Empowering Users:** Providing users with a tool to verify facts empowers them to make informed decisions and engage critically with online content.
+
+**4.Scalability and Adaptability:** The project's scalability and adaptability allow it to remain effective across different topics and datasets as it expands beyond geography.
+
+**5.AI Algorithms:** Leveraging logistic regression, decision tree classifier, and NLP techniques enables the system to analyze textual data and make informed decisions about the truthfulness of statements.
+
+
+
+## Contributers
+- [Harshita Arora](https://github.com/HARSHITARora12)
+- [Harshita Bajiya](https://github.com/Harshitabajiya)
+- [Ishani Verma](https://github.com/Ishani-Verma)
+- [Ishika Tripathi](https://github.com/Tree-ish)
+
+
