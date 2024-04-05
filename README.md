@@ -9,3 +9,5 @@ Why This Project?
 2.Enhancing Information Integrity: Ensuring the integrity of information is crucial, especially in domains where factual accuracy is paramount, such as news reporting, academic research, and public information dissemination.
 
 3.Empowering Users: Providing users with a tool to verify the truthfulness of facts empowers them to make informed decisions, avoid spreading false information, and engage critically with online content.
+4.Scalability and Adaptability: By initially focusing on a geography dataset and planning to expand to other domains, our project demonstrates scalability and adaptability, ensuring that the fact verification system remains relevant and effective across different topics and datasets.
+5.AI Algorithms: By leveraging logistic regression, decision tree classifier, and NLP techniques, the system can analyze textual data and make informed decisions about the truthfulness of statements.
