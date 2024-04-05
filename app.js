@@ -1,14 +1,24 @@
-document.getElementById('clear-btn').addEventListener('click', function() {
+document.getElementById('clear-btn').addEventListener('click', function(event) {
+    event.preventDefault();
     document.getElementById('fact-input').value = '';
 });
-
+// function clearInputField(elementId) {
+//     document.getElementById(elementId).value = '';
+// }
 
 
 document.getElementById('submit-btn').addEventListener('click', function () {
     // Redirect to another page
-    window.location.href = 'output.html'; 
+    window.location.href = 'output.html';
+    var factInput = document.getElementById('fact-input').value;
+    document.getElementById('hidden-fact-input').value = factInput;
+    document.getElementById('fake-fact-form').submit(); 
 });
-
+document.getElementById('refresh-btn').addEventListener('click', function () {
+    var factInput2 = document.getElementById('fact-input2').value;
+    document.getElementById('hidden-fact-input').value = factInput2;
+    document.getElementById('output-form').submit();
+});
 document.addEventListener('DOMContentLoaded', function() {
     var profileIcon = document.getElementById('user-profile');
     var profileTextarea = document.getElementById('profile-textarea');
