@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fact or Fiction</title>
    
-       <link rel="stylesheet" type="text/css" href="qqq.css">
+       <link rel="stylesheet" type="text/css" href="/static/qqq.css">
   
 </head>
 <body>
@@ -20,13 +20,19 @@
                 <p>Are you ready to uncover the real story?</p>
             </div>
         </div>
-        <img src="fact.jpg" alt="An example image">
+        <img src="/static/images/fact.jpg" alt="An example image">
         <div class="right">
-            <button id="check-btn" type="submit">Check</button>
-            <button id="Explore-btn">Explore</button> <!-- Added About button -->
+            <button id="check-btn" type="submit">
+                <a href="/fake_fact_detection">Check</a>
+            </button>
+            <!-- <a href="/fake_fact_detection">Fake Fact Detection</a> -->
+            <button id="Explore-btn">
+                <a href="/explore">Explore</a>
+            </button> <!-- Added About button -->
+            <!-- <a href="/explore">Fake Fact Detection</a> -->
         </div>
     </div>
    
-    <script src="qqq.js"></script>
+    <script src="/static/script.js"></script>
 </body>
 </html>

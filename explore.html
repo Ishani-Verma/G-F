@@ -4,30 +4,48 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Explore</title>
-<link rel="stylesheet" type="text/css" href="explore.css">
+<link rel="stylesheet" type="text/css" href="/static/explore.css">
 </head>
 <body>
 <div class="container">
     <h1>Do you Know?</h1>
-    <textarea readonly>
-- The Amazon Rainforest is Home to Indigenous Tribes.
-- The Great Rift Valley is Visible from Space.
-- Great Barrier Reef is the Largest Coral Reef.
-- Lake Chad has Shrunk Significantly Over the Past Century.
-- Borneo: Third-Largest Island.
-- Great Lakes: Vast Bodies of Freshwater.
-- Maldives is the Lowest-Lying Country.
-- Grand Canyon is One of the Largest Canyons.
-- Mount Elbrus is the Highest Mountain in Europe.
-- The Panama Canal Connects the Atlantic and Pacific Oceans.
+    <textarea id="facts-textarea" readonly>
+      
     </textarea>
-    <button class="new-button">New</button></div>
-    <button class="home-button" onclick="redirectToHome()">Home</button>
+    <button class="new-button" type="submit">
+      <a href="/explore">New</a>
+    </button></div>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          // Function to fetch new facts
+          function fetchNewFacts() {
+              fetch('/get_new_facts')
+                  .then(response => response.json())
+                  .then(data => {
+                      // Extract the facts from the response
+                      const facts = data.facts;
 
-<script>
-function redirectToHome() {
-  window.location.href = "qqq.html";
-}
-</script>
+                      // Update the textarea with new facts
+                      const textarea = document.getElementById('facts-textarea');
+                      textarea.value = facts.map(fact => '- ' + fact).join('\n');
+                  })
+                  .catch(error => console.error('Error fetching new facts:', error));
+          }
+
+          // Fetch new facts when the page loads
+          fetchNewFacts();
+
+          // Add event listener for the "New" button
+          const newFactsBtn = document.getElementById('new-button');
+          newFactsBtn.addEventListener('click', fetchNewFacts);
+      });
+  </script>
+    <button class="home-button" type="submit">
+      <a href="/">Home</a>
+    </button>
+
+
+
+
 </body>
 </html>

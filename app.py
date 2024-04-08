@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for
+# from flask import Flask, render_template, request, redirect, url_for
 
 import pandas as pd
 import numpy as np
@@ -10,8 +10,8 @@ from sklearn.metrics import classification_report
 import re
 import string
 
-data_fake = pd.read_csv('D:/BANASTHALI VIDYAPITH/Inhouse project/FakeFinal.csv')
-data_true = pd.read_csv('D:/BANASTHALI VIDYAPITH/Inhouse project/TrueFinal.csv')
+data_fake = pd.read_csv('D:/BANASTHALI VIDYAPITH/Inhouse project/fake1.csv')
+data_true = pd.read_csv('D:/BANASTHALI VIDYAPITH/Inhouse project/true1.csv')
 data_fake.head()
 data_true.head()
 
@@ -19,11 +19,11 @@ data_fake['class'] = 0
 data_true['class'] = 1
 
 data_fake_manual_testing = data_fake.tail(10)
-for i in range(19,9,-1): 
+for i in range(98, 88,-1): 
     data_fake.drop([i], axis = 0, inplace = True)
 
 data_true_manual_testing = data_true.tail(10) 
-for i in range(19, 9,-1):
+for i in range(98, 88,-1):
     data_true.drop([i], axis = 0, inplace = True)
 
 data_fake_manual_testing['class'] = 0
@@ -32,7 +32,7 @@ data_true_manual_testing['class'] = 1
 data_merge = pd.concat([data_fake, data_true], axis = 0) 
 data_merge.head(10)
 
-data = data_merge.drop(['Title', 'Subject', 'Date'], axis = 1)
+data = data_merge.drop(['Title', 'Subject'], axis = 1)
 
 def wordopt(Text):
     Text=Text.lower()
@@ -93,29 +93,66 @@ def manual_testing(Fact):
     print("Processed Text:", new_x_test)
     print(lr_prediction)
     
-    return f"\n\nLR Prediction: {lr_prediction}\nDT Prediction: {dt_prediction}"
+    return f"\n\n{lr_prediction}"
 Fact = str(input())
 
 
 # app = Flask(__name__)
-app = Flask(__name__, template_folder='templates')
+# app = Flask(__name__, template_folder='templates')
 
+# @app.route('/')
+# def index():
+#     return render_template("fake_fact_detection.html")
+
+# @app.route('/detect_fake_fact', methods=['POST'])
+# def detect_fake_fact():
+#     if request.method == 'POST':
+#         fact = request.form['fact_input']
+#         result = manual_testing(fact)
+#         return render_template("output.html", result=result)
+#     return render_template("output.html")
+
+# @app.route('/output')
+# def output():
+#     result = request.args.get('result')
+#     return render_template("output.html", result=result)
+
+# if __name__ == '__main__':
+#     app.run(debug=True)
+
+from flask import Flask, render_template, request, redirect, url_for, jsonify
+app = Flask(__name__)
+
+# Define routes
 @app.route('/')
 def index():
+    return render_template("qqq.html")
+
+@app.route('/explore')
+def explore():
+    return render_template("explore.html")
+
+@app.route('/fake_fact_detection')
+def fake_fact_detection():
     return render_template("fake_fact_detection.html")
 
 @app.route('/detect_fake_fact', methods=['POST'])
 def detect_fake_fact():
     if request.method == 'POST':
         fact = request.form['fact_input']
-        result = manual_testing(fact)
+        # Perform your fake fact detection process here
+        result = manual_testing(fact)  # Replace this with your actual result
         return render_template("output.html", result=result)
     return render_template("output.html")
 
-@app.route('/output')
-def output():
-    result = request.args.get('result')
-    return render_template("output.html", result=result)
+@app.route('/get_new_facts')
+def get_new_facts():
+    data = pd.read_excel('D:/BANASTHALI VIDYAPITH/Inhouse project/true1.xlsx', engine='openpyxl')
+    # # Convert the data to a list of dictionaries
+    # new_facts = data.sample(n=10)['Text'].tolist()
+    # return jsonify({'facts': new_facts})
+    new_facts = data.sample(n=10)['Text'].tolist()
+    return jsonify({'facts': new_facts})
 
 if __name__ == '__main__':
     app.run(debug=True)

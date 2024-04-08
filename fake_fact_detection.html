@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fake Fact Detection</title>
-    <link rel="stylesheet" type="text/css" href="fake_fact_detection.css">
+    <link rel="stylesheet" type="text/css" href="/static/fake_fact_detection.css">
 </head>
 <body>
   
@@ -16,12 +16,19 @@
       <input type="text" id="fact-input" placeholder="Enter text...">
       <br>
       <button id="submit-btn" type="submit">Submit</button>
-      <button id="clear-btn">Clear</button>
+      <button id="clear-btn">
+        <a href="/fake_fact_detection">Clear</a>
+      </button>
   </form>
-   
+  <button class="home-button" type="submit">
+    <a href="/">Home</a>
+  </button>
+
+  
+
    
   </div>
 
-  <script src="app.js"></script>
+  <script src="/scripts/app.js"></script>
 </body>
 </html>
