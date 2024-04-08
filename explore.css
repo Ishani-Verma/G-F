@@ -37,7 +37,7 @@ textarea {
     font-family: Georgia;
 }
 .new-button {
-    background-color: rgb(51, 1, 144); 
+    background-color: rgb(144, 132, 165); 
     border: none;
     color: #130533;
     padding: 10px 20px;
@@ -58,7 +58,7 @@ textarea {
 }
 
 .home-button {
-    background-color: rgb(51, 1, 144); 
+    background-color: rgb(144, 132, 165); 
     border: none;
     color: #130533;
     padding: 10px 20px;

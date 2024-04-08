@@ -75,11 +75,11 @@ p {
     font-size: 18px; /* Increased font size */
 }
 #check-btn,#Explore-btn{
-    background-color: rgb(51, 1, 144); /* Dark blue background color */
+    background-color: rgb(144, 132, 165); /* Dark blue background color */
     background-size: cover;
     background-position: center;
     color: white; /* Text color inside the buttons */
-    padding: 15px 30px; /* Adjusted button padding */
+    padding: 10px 10px; /* Adjusted button padding */
     border: none;
     border-radius: 5px;
     font-size: 20px; /* Increased button font size */
